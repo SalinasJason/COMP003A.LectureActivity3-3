@@ -80,6 +80,25 @@
                 // Display the current number
                 Console.WriteLine(i);
             }
+
+            // Prompt the user to restart the program
+            Console.Write("Enter 'restart' to try again or any other key to exit: ");
+            // Convert the response to lowercase to make it case-insensitive
+            string restart = Console.ReadLine().ToLower();
+
+            // Check if the user wants to restart the program
+            if (restart == "restart")
+            {
+                // Restart the program
+                goto Restart;
+            }
+
+        // Label to restart the program
+        Restart:
+            // Display a message and restart rthe program
+            Console.WriteLine("Restarting the program.../n");
+            // Restart the program
+            Main(args); // Restart the program
         }
     }
 }
