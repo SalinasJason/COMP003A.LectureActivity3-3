@@ -27,6 +27,23 @@
                     Console.WriteLine($"Invalid input: {ex.Message}\nPlease try again.\n");
                 }
             }
+
+            // Get the user's preferences for skipping and terminating the loop
+            Console.Write("Would you like to skip a number?");
+            // Convert the response to lowercase to make it case-insensitive
+            string skipResponse = Console.ReadLine().ToLower();
+            // Initalize the skip number to 0
+            int skipNumber = 0;
+            // Check if the user wants to skip a number
+            if (skipResponse == "yes")
+            {
+                // Prompt the user to enter the number to skip
+                Console.Write("Enter the number to skip");
+                // Parse the input to an integer
+                skipNumber = int.Parse(Console.ReadLine());
+            }
+
+            
         }
     }
 }
