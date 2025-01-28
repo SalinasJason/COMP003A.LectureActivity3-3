@@ -29,7 +29,7 @@
             }
 
             // Get the user's preferences for skipping and terminating the loop
-            Console.Write("Would you like to skip a number?");
+            Console.Write("Would you like to skip a number? (yes/no): ");
             // Convert the response to lowercase to make it case-insensitive
             string skipResponse = Console.ReadLine().ToLower();
             // Initalize the skip number to 0
@@ -38,13 +38,13 @@
             if (skipResponse == "yes")
             {
                 // Prompt the user to enter the number to skip
-                Console.Write("Enter the number to skip");
+                Console.Write("Enter the number to skip: ");
                 // Parse the input to an integer
                 skipNumber = int.Parse(Console.ReadLine());
             }
 
             // Get the user's preferences for terminating the loop
-            Console.Write("Would you like to terminate the loop at a specific number? {yes/no)");
+            Console.Write("Would you like to terminate the loop at a specific number? (yes/no): ");
             // Convert the response to lowercase to make it case-insensitive
             string terminateResponse = Console.ReadLine().ToLower();
             // Initialize the termination number to 0
@@ -58,7 +58,28 @@
                 terminateNumber = int.Parse(Console.ReadLine());
             }
 
+            // Display the output
+            Console.WriteLine("\nOutput:");
+            // iterate through the range of numbers
+            for (int i = 1; i <= range; i++)
+            {
+                // Check if the current number is the number to skip
+                if (i == skipNumber)
+                {
+                    continue; // Skip the specified number
+                }
 
+                // Check if the current number is the number to terminte at
+                if (i == terminateNumber)
+                {
+                    // Display a message and break out of the loop
+                    Console.WriteLine($"Loop terminated at number {terminateNumber}.");
+                    break; // Terminate the loop
+                }
+
+                // Display the current number
+                Console.WriteLine(i);
+            }
         }
     }
 }
