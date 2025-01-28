@@ -43,7 +43,22 @@
                 skipNumber = int.Parse(Console.ReadLine());
             }
 
-            
+            // Get the user's preferences for terminating the loop
+            Console.Write("Would you like to terminate the loop at a specific number? {yes/no)");
+            // Convert the response to lowercase to make it case-insensitive
+            string terminateResponse = Console.ReadLine().ToLower();
+            // Initialize the termination number to 0
+            int terminateNumber = 0;
+            // Check if the user wants to terminate the loop
+            if (terminateResponse == "yes")
+            {
+                // Prompt the user to enter the termination number
+                Console.Write("Enter the termination number: ");
+                // Parse the input to an integer
+                terminateNumber = int.Parse(Console.ReadLine());
+            }
+
+
         }
     }
 }
