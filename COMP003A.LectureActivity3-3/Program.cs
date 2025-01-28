@@ -1,4 +1,10 @@
-﻿namespace COMP003A.LectureActivity3_3
+﻿/*
+Author: Jason Salinas
+Course: COMP-003A
+Faculty: Jonathan Cruz
+Purpose: 3.6 Lecture Activity: Advanced Control Statements.
+*/
+namespace COMP003A.LectureActivity3_3
 {
     internal class Program
     {
